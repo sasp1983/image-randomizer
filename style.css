@@ -1,0 +1,104 @@
+html {
+  min-height: 100dvh;
+  position: relative;
+}
+
+body {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: rgb(20, 20, 20);
+  font-family: arial;
+}
+
+.bar-top {
+  height: 50%;
+  position: absolute;
+  width: 100%;
+  transition: 300ms;
+  top: 0%;
+  background-color: black;
+  z-index: 1;
+  /* opacity: 50%; */
+  pointer-events: none;
+  border-bottom: 1px solid white;
+}
+
+.bar-bottom {
+  height: 50%;
+  position: absolute;
+  width: 100%;
+  transition: 300ms;
+  bottom: 0%;
+  background-color: black;
+  z-index: 1;
+  /* opacity: 50%; */
+  pointer-events: none;
+  border-top: 1px solid white;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 3;
+  /* top: calc(50% - 50px); */
+  bottom: 3.5%;
+  right: calc(50% - 50px);
+  border: none;
+  cursor: pointer;
+}
+
+.pic {
+  z-index: -2;
+  height: 1000px;
+  object-fit: cover;
+  width: 1000px;
+}
+
+/* .button:active ~ .bar-top {
+    top: -50%;
+
+}
+
+.button:active ~ .bar-bottom {
+    bottom: -50%;
+} */
+
+.up {
+  top: -50%;
+  transition: 300ms;
+}
+
+.down {
+  bottom: -50%;
+  transition: 300ms;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+img {
+  position: absolute;
+  height: 100%;
+  object-fit: contain;
+}
+
+.img-wrapper {
+  height: 100%;
+}
+
+.top-closed {
+  top: 0%;
+}
+
+.bottom-closed {
+  bottom: 0%;
+}
