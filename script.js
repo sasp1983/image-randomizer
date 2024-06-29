@@ -1,9 +1,6 @@
 let barTop = document.querySelector(".bar-top");
-
 let barBottom = document.querySelector(".bar-bottom");
-
 let button = document.querySelector(".button");
-
 let imgWrapper = document.querySelector(".img-wrapper");
 
 // let img = document.createElement('img');
