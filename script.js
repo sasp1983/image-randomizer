@@ -48,7 +48,7 @@ async function fetchRandomImage() {
       imgWrapper.appendChild(img);
 
       
-        img.onload = barsOpenToggle();
+        img.onload = setTimeout(barsOpenToggle, "500ms");
       
     } catch (error) {
       console.error("Error fetching the image:", error);
