@@ -66,8 +66,6 @@ async function fetchRandomImage() {
   if (imgWrapper.childElementCount >= 2) {
     imgWrapper.firstChild.remove();
   }
-
-  // imgWrapper.firstChild.remove();
 }
 
 // Call the function to fetch and display the random image
