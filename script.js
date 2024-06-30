@@ -32,7 +32,7 @@ async function fetchRandomImage() {
   if (
     !barTop.classList.contains("up") &&
     !barBottom.classList.contains("down")
-  ) {
+) {
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -49,7 +49,7 @@ async function fetchRandomImage() {
       img.className = "image";
       imgWrapper.appendChild(img);
 
-      if (barTop.style.transform.value === "translateY(-100%)") {
+      if (barTop.style.transform = "translateY(-100%)") {
         img.onload = barsOpenToggle();
       }
     } catch (error) {
