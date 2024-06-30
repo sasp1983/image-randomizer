@@ -75,6 +75,13 @@ const fetchRandomImage = async () => {
   const img = document.createElement('img');
   imgWrapper.append(img);
    img.src = data.photos[Math.floor(Math.random() * data.photos.length)].img_src;
+
+  const loadingImage = document.createElement('img');
+  loadingImage.src = 'icons8-spinner.gif';
+  imgWrapper.append(loadingImage);
+
+
+
    img.onload = barsOpenToggle();
    console.log(img)
   } catch (error) {
