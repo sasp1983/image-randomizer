@@ -136,3 +136,9 @@ body {
   filter: invert();
   vertical-align:bottom;
 }
+
+@media screen and (max-width: 375px) {
+  .download-link {
+    bottom: 25%;
+  }
+}
