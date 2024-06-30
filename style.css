@@ -139,6 +139,6 @@ body {
 
 @media screen and (max-width: 375px) {
   .download-link {
-    bottom: 25%;
+    bottom: 20%;
   }
 }
