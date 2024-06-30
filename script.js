@@ -60,7 +60,13 @@ button.addEventListener("click", function () {
 //   }
 // }
 
+
+
 const fetchRandomImage = async () => {
+
+  const loadingImage = document.querySelector(".loader");
+  loadingImage.classList.remove("hide-loader")
+
   if (
     !barTop.classList.contains("up") &&
     !barBottom.classList.contains("down")
@@ -75,11 +81,7 @@ const fetchRandomImage = async () => {
   const img = document.createElement('img');
   imgWrapper.append(img);
    img.src = data.photos[Math.floor(Math.random() * data.photos.length)].img_src;
-
-  const loadingImage = document.createElement('img');
-  loadingImage.src = 'icons8-spinner.gif';
-  imgWrapper.append(loadingImage);
-
+   img.onload = loadingImage.classList.add('hide-loader');
 
 
    img.onload = barsOpenToggle();
