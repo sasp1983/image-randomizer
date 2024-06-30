@@ -76,7 +76,7 @@ body {
 }
 
 .down {
-  bottom: translateY(-100%);
+  transform: translateY(100%);
   transition: 300ms;
 }
 
