@@ -142,3 +142,9 @@ body {
     bottom: 20%;
   }
 }
+
+@media screen and (max-width: 576px) {
+  .download-link {
+    bottom: 20%;
+  }
+}
