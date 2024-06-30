@@ -87,9 +87,7 @@ const fetchRandomImage = async () => {
   //   }
   // }
 
-  img.onload = () => {
-    barsOpenToggle();
-  }
+  img.onload = barsOpenToggle();
  
   // showImageOnLoad()
    img.src = data.photos[Math.floor(Math.random() * data.photos.length)].img_src;
