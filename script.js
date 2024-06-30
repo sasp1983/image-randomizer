@@ -38,8 +38,6 @@ button.addEventListener("click", function () {
 //       const blob = await response.blob();
 //       const imageUrl = URL.createObjectURL(blob);
 
-      
-
 //       // Create an img element and set its source to the imageUrl
 
 //       img.src = imageUrl;
@@ -63,8 +61,6 @@ button.addEventListener("click", function () {
 //     imgWrapper.firstChild.remove();
 //   }
 // }
-
-
 
 const fetchRandomImage = async () => {
 
@@ -94,13 +90,8 @@ const fetchRandomImage = async () => {
   showImageOnLoad()
    img.src = data.photos[Math.floor(Math.random() * data.photos.length)].img_src;
    img.onload = loadingImage.classList.add('hide-loader');
-
-
-
-    
     downloadLink.href = img.src;
     downloadLink.classList.add('show-link');
-
 
    console.log(img)
   } catch (error) {
