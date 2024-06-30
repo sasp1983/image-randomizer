@@ -89,6 +89,7 @@ body {
 .img-wrapper img {
   position: absolute;
   height: 100%;
+  width: 100%;
   object-fit: contain;
 }
 
@@ -106,7 +107,6 @@ body {
   top: calc(50% - 25px); 
   right: 50%;
   filter:invert();
-
 }
 
 .hide-loader {
