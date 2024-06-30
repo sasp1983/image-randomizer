@@ -48,7 +48,10 @@ async function fetchRandomImage() {
       img.style.width = "100%";
       img.className = "image";
       imgWrapper.appendChild(img);
-      img.onload = barsOpenToggle();
+
+      if (barTop.style.transform.value === "translateY(-100%)") {
+        img.onload = barsOpenToggle();
+      }
     } catch (error) {
       console.error("Error fetching the image:", error);
     }
