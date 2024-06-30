@@ -112,3 +112,27 @@ body {
 .hide-loader {
   display: none;
 }
+
+.download-link {
+  position: absolute;
+  bottom: 15%; 
+  /* left: 42%; */
+  transform-origin:center;
+  color: white;
+  cursor: pointer;
+  z-index: 5;
+  display: none;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+}
+
+.show-link {
+  display: inline-block;
+}
+
+.dl-icon {
+  height: 25px;
+  filter: invert();
+  vertical-align:bottom;
+}
