@@ -70,12 +70,12 @@ body {
 } */
 
 .up {
-  top: -50%;
+  transform: translateY(-100%);
   transition: 300ms;
 }
 
 .down {
-  bottom: -50%;
+  bottom: translateY(100%);
   transition: 300ms;
 }
 
