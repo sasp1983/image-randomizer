@@ -69,8 +69,8 @@ const fetchRandomImage = async () => {
   const config = { headers: { Accept: "application/json" } };
   const response = await axios.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=TDRKWxcci6VXt53Z5NocxnQTtTg6N2fsiSZOR8dQ", config);
   const data = response.data;
-  console.log(response);
-  console.dir(data.photos);
+  // console.log(response);
+  // console.dir(data.photos);
 
   const img = document.createElement('img');
   imgWrapper.append(img);
