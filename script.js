@@ -2,6 +2,7 @@ let barTop = document.querySelector(".bar-top");
 let barBottom = document.querySelector(".bar-bottom");
 let button = document.querySelector(".button");
 let imgWrapper = document.querySelector(".img-wrapper");
+let up = document.querySelector(".up");
 
 // let img = document.createElement('img');
 // img.className = 'pic';
@@ -9,15 +10,12 @@ let imgWrapper = document.querySelector(".img-wrapper");
 function barsOpenToggle() {
   barTop.classList.add("up");
   barBottom.classList.add("down");
-  // barTop.classList.remove("top-closed");
-  // barBottom.classList.remove("bottom-closed");
+
 }
 
 function barsClosedToggle() {
   barTop.classList.remove("up");
   barBottom.classList.remove("down");
-  // barTop.classList.add("top-closed");
-  // barBottom.classList.add("bottom-closed");
 }
 
 button.addEventListener("click", function () {
@@ -49,7 +47,7 @@ async function fetchRandomImage() {
       img.className = "image";
       imgWrapper.appendChild(img);
 
-      if (barTop.style.transform = "translateY(-100%)") {
+      if (up.style.transform = "translateY(-100%)") {
         img.onload = barsOpenToggle();
       }
     } catch (error) {
