@@ -22,7 +22,8 @@ body {
   top: 0%;
   background-color: black;
   z-index: 1;
-  /* opacity: 50%; */
+  /*opacity: 50%;
+  */
   pointer-events: none;
   border-bottom: 1px solid white;
 }
@@ -70,12 +71,12 @@ body {
 } */
 
 .up {
-  top: -50%;
+  transform: translateY(-100%);
   transition: 300ms;
 }
 
 .down {
-  bottom: -50%;
+  transform: translateY(100%);
   transition: 300ms;
 }
 
@@ -93,12 +94,4 @@ img {
 
 .img-wrapper {
   height: 100%;
-}
-
-.top-closed {
-  top: 0%;
-}
-
-.bottom-closed {
-  bottom: 0%;
 }
