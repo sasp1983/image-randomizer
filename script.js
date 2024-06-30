@@ -81,13 +81,17 @@ const fetchRandomImage = async () => {
   const img = document.createElement('img');
   imgWrapper.append(img);
 
-  function showImageOnLoad() {
-    if (img.loadingImage = '100%') {
-      barsOpenToggle();
-    }
+  // function showImageOnLoad() {
+  //   if (img.loadingImage = '100%') {
+  //     barsOpenToggle();
+  //   }
+  // }
+
+  img.onload = () => {
+    barsOpenToggle();
   }
  
-  showImageOnLoad()
+  // showImageOnLoad()
    img.src = data.photos[Math.floor(Math.random() * data.photos.length)].img_src;
    img.onload = loadingImage.classList.add('hide-loader');
     downloadLink.href = img.src;
