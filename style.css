@@ -18,7 +18,7 @@ body {
   height: 50%;
   position: absolute;
   width: 100%;
-  transition: 300ms;
+  transition: ease-out 300ms;
   top: 0%;
   background-color: black;
   z-index: 1;
@@ -32,7 +32,7 @@ body {
   height: 50%;
   position: absolute;
   width: 100%;
-  transition: 300ms;
+  transition:ease-out 300ms;
   bottom: 0%;
   background-color: black;
   z-index: 1;
