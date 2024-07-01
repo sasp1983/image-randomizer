@@ -28,7 +28,7 @@ button.addEventListener("click", function () {
 //main function
 const fetchRandomImage = async () => {
   
-  //show loading icon while image loads behind bars
+  //show loading icon while image loads behind sliding bars
   function showLoader () {
   loadingImage.classList.add("show-loader");
   }
