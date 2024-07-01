@@ -65,7 +65,12 @@ button.addEventListener("click", function () {
 const fetchRandomImage = async () => {
 
   const loadingImage = document.querySelector(".loader");
+  
+  function hideLoader () {
   loadingImage.classList.remove("hide-loader")
+  }
+
+  setTimeout(hideLoader,300);
 
   if (
     !barTop.classList.contains("up") &&
@@ -90,8 +95,8 @@ const fetchRandomImage = async () => {
   img.onload = barsOpenToggle();
  
   // showImageOnLoad()
-   img.src = data.photos[Math.floor(Math.random() * data.photos.length)].img_src;
-   img.onload = loadingImage.classList.add('hide-loader');
+    img.src = data.photos[Math.floor(Math.random() * data.photos.length)].img_src;
+    img.onload = loadingImage.classList.add('hide-loader');
     downloadLink.href = img.src;
     downloadLink.classList.add('show-link');
 
