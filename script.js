@@ -91,11 +91,8 @@ const fetchRandomImage = async () => {
   //   }
   // }
 
-  // img.onload = barsOpenToggle();
-  if (img.complete) {
-   setTimeout(barsOpenToggle,500);
-  }
- 
+  img.onload = setTimeout(barsOpenToggle, 300);
+
   // showImageOnLoad()
     img.src = data.photos[Math.floor(Math.random() * data.photos.length)].img_src;
     img.onload = 
