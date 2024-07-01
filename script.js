@@ -1,11 +1,13 @@
+//declare element variables
+
 let barTop = document.querySelector(".bar-top")
 let barBottom = document.querySelector(".bar-bottom");
 let button = document.querySelector(".button");
 let imgWrapper = document.querySelector(".img-wrapper");
+let downloadLink = document.querySelector('.download-link');
+let loadingImage = document.querySelector(".loader");
 
-const downloadLink = document.querySelector('.download-link');
-const loadingImage = document.querySelector(".loader");
-
+//bar sliding functions
 function barsOpenToggle() {
   barTop.classList.add("up");
   barBottom.classList.add("down");
@@ -17,7 +19,7 @@ function barsClosedToggle() {
   downloadLink.classList.remove('show-link');
 }
 
-
+//main button 
 button.addEventListener("click", function () {
   fetchRandomImage();
 });
@@ -63,12 +65,18 @@ button.addEventListener("click", function () {
 //   }
 // }
 
+
+
+
+
+
+
+//main function
 const fetchRandomImage = async () => {
   
   function showLoader () {
   loadingImage.classList.add("show-loader");
   }
-
   setTimeout(showLoader,300)
 
   if (
@@ -93,28 +101,31 @@ const fetchRandomImage = async () => {
 
   img.onload = setTimeout(barsOpenToggle, 300);
 
-  // showImageOnLoad()
+  //show loader icon while image is loading behind closed bars
     img.src = data.photos[Math.floor(Math.random() * data.photos.length)].img_src;
     img.onload = 
     setTimeout (function () {
       loadingImage.classList.remove('show-loader');
     },450);
 
+    //create download link to save image
     downloadLink.href = img.src;
     function showLink () {
       downloadLink.classList.add('show-link');
     }
-
-    setTimeout(showLink,0);
+    showLink()
 
    console.log(img)
   } catch (error) {
     console.error("ERROR", error);
   }
 } else {
+  //close sliding bars and execute main function again
   barsClosedToggle();
   fetchRandomImage();
 }
+
+//delete old images
 if (imgWrapper.childElementCount >= 2) {
   imgWrapper.firstChild.remove();
 }
