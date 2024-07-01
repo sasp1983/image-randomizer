@@ -2,8 +2,9 @@ let barTop = document.querySelector(".bar-top")
 let barBottom = document.querySelector(".bar-bottom");
 let button = document.querySelector(".button");
 let imgWrapper = document.querySelector(".img-wrapper");
-const downloadLink = document.querySelector('.download-link');
 
+const downloadLink = document.querySelector('.download-link');
+const loadingImage = document.querySelector(".loader");
 
 function barsOpenToggle() {
   barTop.classList.add("up");
@@ -16,6 +17,9 @@ function barsClosedToggle() {
   downloadLink.classList.remove('show-link');
 }
 
+function showLoaderFirstTime () {
+  loadingImage.classList.add("show-loader");
+  }
 
 button.addEventListener("click", function () {
   fetchRandomImage();
@@ -63,14 +67,12 @@ button.addEventListener("click", function () {
 // }
 
 const fetchRandomImage = async () => {
-
-  const loadingImage = document.querySelector(".loader");
   
   function showLoader () {
   loadingImage.classList.add("show-loader");
   }
 
-  setTimeout(showLoader,300);
+  setTimeout(showLoader,300)
 
   if (
     !barTop.classList.contains("up") &&
@@ -118,7 +120,6 @@ const fetchRandomImage = async () => {
 } else {
   barsClosedToggle();
   fetchRandomImage();
-
 }
 if (imgWrapper.childElementCount >= 2) {
   imgWrapper.firstChild.remove();
