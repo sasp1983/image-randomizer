@@ -104,7 +104,7 @@ body {
   height: 25px;
   z-index: 5;
   position: absolute;
-  top: calc(50% - 25px); 
+  top: calc(50% - 30px); 
   right: 50%;
   filter:invert();
   display: none;

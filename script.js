@@ -24,6 +24,7 @@ button.addEventListener("click", function () {
 });
 
 
+
 //main function
 const fetchRandomImage = async () => {
   
@@ -56,7 +57,7 @@ const fetchRandomImage = async () => {
     img.onload = 
     setTimeout (function () {
       loadingImage.classList.remove('show-loader');
-    },450);
+    },300);
 
     //create download link to save image
     downloadLink.href = img.src;
