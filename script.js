@@ -50,7 +50,7 @@ const fetchRandomImage = async () => {
     //randomize image link from json fetch
     img.src = data.photos[Math.floor(Math.random() * data.photos.length)].img_src;
 
-    img.onload = setTimeout(barsOpenToggle, 300);
+    img.onload = setTimeout(barsOpenToggle, 400);
 
 
     //hide loading icon when image is loaded
