@@ -17,9 +17,6 @@ function barsClosedToggle() {
   downloadLink.classList.remove('show-link');
 }
 
-function showLoaderFirstTime () {
-  loadingImage.classList.add("show-loader");
-  }
 
 button.addEventListener("click", function () {
   fetchRandomImage();
