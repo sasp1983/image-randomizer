@@ -66,11 +66,11 @@ const fetchRandomImage = async () => {
 
   const loadingImage = document.querySelector(".loader");
   
-  function hideLoader () {
-  loadingImage.classList.remove("hide-loader")
+  function showLoader () {
+  loadingImage.classList.add("show-loader");
   }
 
-  setTimeout(hideLoader,300);
+  setTimeout(showLoader,300);
 
   if (
     !barTop.classList.contains("up") &&
@@ -92,13 +92,24 @@ const fetchRandomImage = async () => {
   //   }
   // }
 
-  img.onload = barsOpenToggle();
+  // img.onload = barsOpenToggle();
+  if (img.complete) {
+   setTimeout(barsOpenToggle,500);
+  }
  
   // showImageOnLoad()
     img.src = data.photos[Math.floor(Math.random() * data.photos.length)].img_src;
-    img.onload = loadingImage.classList.add('hide-loader');
+    img.onload = 
+    setTimeout (function () {
+      loadingImage.classList.remove('show-loader');
+    },450);
+
     downloadLink.href = img.src;
-    downloadLink.classList.add('show-link');
+    function showLink () {
+      downloadLink.classList.add('show-link');
+    }
+
+    setTimeout(showLink,0);
 
    console.log(img)
   } catch (error) {
@@ -107,6 +118,7 @@ const fetchRandomImage = async () => {
 } else {
   barsClosedToggle();
   fetchRandomImage();
+
 }
 if (imgWrapper.childElementCount >= 2) {
   imgWrapper.firstChild.remove();

@@ -107,11 +107,15 @@ body {
   top: calc(50% - 25px); 
   right: 50%;
   filter:invert();
-}
-
-.hide-loader {
   display: none;
 }
+
+
+.show-loader {
+  display: block;
+}
+
+ 
 
 .download-link {
   position: absolute;
@@ -129,6 +133,7 @@ body {
 
 .show-link {
   display: inline-block;
+  z-index: 0;
 }
 
 .dl-icon {
